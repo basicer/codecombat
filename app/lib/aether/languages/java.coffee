@@ -7,8 +7,9 @@ module.exports = class Java extends Language
 
   constructor: ->
     super arguments...
-    @runtimeGlobals = ___JavaRuntime: parserHolder.cashew.___JavaRuntime, _Object: parserHolder.cashew._Object, Integer: parserHolder.cashew.Integer, Double: parserHolder.cashew.Double, _NotInitialized: parserHolder.cashew._NotInitialized, _ArrayList: parserHolder.cashew._ArrayList
 
+  hasChangedASTs: (a, b) -> true
+  usesFunctionWrapping: () -> false
 
   obviouslyCannotTranspile: (rawCode) ->
     false
